@@ -1,0 +1,43 @@
+    #editProfileDialog > div {
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 640px) {
+    #editProfileDialog > div {
+        width: 95% !important;
+        max-width: 100%;
+        max-height: 90vh;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+    #editProfileDialog form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #editProfileDialog form > div.grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    #editProfileDialog button[type="submit"] {
+        position: sticky;
+        bottom: 0;
+        background-color: #16a34a; /* Tailwind green-600 */
+        padding: 0.75rem 1.5rem;
+        margin-top: auto;
+        border-radius: 0 0 0.5rem 0.5rem;
+        box-shadow: 0 -2px 8px rgba(22,163,74,0.3);
+        z-index: 50;
+        width: 100%;
+        font-weight: 600;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #editProfileDialog button[type="submit"]:hover {
+        background-color: #15803d; /* Tailwind green-700 */
+    }
+}
